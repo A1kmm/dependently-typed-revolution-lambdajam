@@ -35,11 +35,106 @@
                     <div></div>
                   </div>
                 </section>
-				<section>
+                <section>
                   <h1 class="heading">Properties and Propositions</h1>
-                  Slide 2
+                  <pre style="font-size: 40pt">
+natToString : Nat → String
+stringToNat : String → Maybe Nat
+                    
+forall a in Nat. stringToNat (natToString a) = Just a
+
+prop : Nat → Bool
+prop a = stringToNat (natToString a) == Just a
+                  </pre>
                 </section>
-                <section data-background-color="#000" data-background-video="../ProofSweeperBase.mp4">
+                <section>
+                  <h1>Formal Verification and Certified Software</h1>
+                  <pre style="font-size: 40pt">
+forall a in Nat, a > 0, b in Nat, b > 0, c in Nat, c > 0, n in Nat,  n > 2:
+  a<sup>n</sup> + b<sup>n</sup> ≠ c<sup>n</sup>
+                  </pre>
+                  <div>Proposition stated 1637</div>
+                  <div>Proved 1994</div>
+                </section>
+                <section>
+                  <h1>Curry-Howard Correspondence</h1>
+                  <img style="width: 600px" src="../HaskellCurry.png">
+                  <div>Photograph of Haskell Curry</div>
+                  <div>Image credit: Gleb Svechnikov. Licensed under Creative
+                       Commons – By – Share Alike</div>
+                </section>
+                <section>
+                  <h1>Curry-Howard Correspondence</h1>
+                  <table>
+                    <tr><th>Typed Lambda Calculus</th>
+                      <th>Mathematical Logic</th>
+                      <th>Example</th>
+                    </tr>
+                    <tr>
+                      <td>Type</td><td>A proposition</td>
+                      <td>x : Nat ↔ There exists at least one natural number</td>
+                    </tr>
+                    <tr>
+                      <td>Value</td><td>A proof</td>
+                      <td>x = 1 (I have proved that there exists a natural number by supplying an example, 1).</td>
+                    </tr>
+                  </table>
+                </section>
+                <section>
+                  <h1>Traditional Type Systems</h1>
+                  <img style="width: 1900px" src="../TraditionalTypeSystems.png">
+                </section>
+                <section>
+                  <h1>Dependent Types in Idris</h1>
+                  <pre style="font-size: 40pt">
+data Vec : Nat -> Type -> Type where
+  MkVec : (l : List a) -> Vec (length l) a
+
+myVec : Vec 5 Nat
+myVec = MkVec [1, 2, 3, 4, 5]
+                  </pre>
+                </section>
+                <section>
+                  <h1>Minesweeper as an Example Problem</h1>
+                  <img style="height: 800px" src="../minesweeper.png">
+                </section>
+                <section>
+                  <img style="height: 1000px" src="../CreateGame.png">
+                  <div>https://github.com/A1kmm/proofsweeper</div>
+                </section>
+                <section data-background-color="#cccccc" data-background-size="contain" data-background-video="../ProofSweeperBase1.mp4">
+                </section>
+                <section data-background-color="#cccccc" data-background-size="contain" data-background-video="../ProofSweeperBase2.mp4">
+                </section>
+                <section data-background-color="#cccccc" data-background-size="contain" data-background-video="../ProofSweeperBase3.mp4">
+                </section>
+                <section data-background-color="#cccccc" data-background-size="contain" data-background-video="../ProofSweeperBase4.mp4">
+                </section>
+                <section data-background-color="#cccccc" data-background-size="contain" data-background-video="../ProofSweeperBase5.mp4">
+                </section>
+                <section>
+                  <h1>Haskell Web Application Interface</h1>
+                  <img style="height: 800px" src="../wai.png">
+                </section>
+                <section>
+                  <h1>http4idris HttpEngine</h1>
+                  <img style="height: 800px" src="../HttpEngine.png">
+                </section>
+                <section>
+                  <h1>http4idris HttpEngine</h1>
+                  <img src="../jmeter.png">
+                </section>
+                <section>
+                  <h1>Sharing knowledge with guilds</h1>
+                  <img style="height: 800px" src="../guild.jpeg">
+                </section>
+                <section>
+                  <h1>Questions?</h1>
+                  <div style="font-size: 50pt">Get in touch: andrew.miller@rea-group.com</div>
+                  <div style="font-size: 50pt">ProofSweeper: https://github.com/A1kmm/proofsweeper</div>
+                  <div style="font-size: 50pt">http4idris: https://github.com/A1kmm/http4idris</div>
+                  <div style="font-size: 50pt">REA Tech blog: https://rea.to/techblog</div>
+                  <div style="font-size: 50pt">Find out about working at REA: https://rea.to/careers</div>
                 </section>
 			</div>
 		</div>
@@ -60,6 +155,6 @@
 				]
 			});
 		</script>
-        <div src="img/REALogo.png" style="position: absolute; background-image: url('img/REALogo.png'); background-repeat: no-repeat; background-position: 0px -80px; background-size: 250px; bottom: -150px; right: 50px; width: 250px; height: 250px; border: 0px"></div>
+        <div src="img/REALogo.png" style="position: absolute; background-image: url('img/REALogo.png'); background-repeat: no-repeat; background-position: 0px -80px; background-size: 250px; bottom: -170px; right: -5px; width: 250px; height: 250px; border: 0px"></div>
 	</body>
 </html>
