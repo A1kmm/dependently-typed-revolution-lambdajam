@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Dependently Typed Revolution</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="center">
+                  <h1>The Dependently Typed Revolution</h1>
+                  <h2>Proving your programs are correct with dependent types</h2>
+                  <div style="width: 100%; height: 50mm; background: #e4002b; color: white; text-align: left; padding: 10px;">
+                    <div>Andrew Miller - andrew.miller@rea-group.com</div>
+                    <div>https://github.com/A1kmm</div>
+                    <div>https://rea.to/careers</div>
+                    <div></div>
+                  </div>
+                </section>
+				<section>
+                  <h1 class="heading">Properties and Propositions</h1>
+                  Slide 2
+                </section>
+                <section data-background-color="#000" data-background-video="../ProofSweeperBase.mp4">
+                </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                width: 1920, height: 1080, controlsLayout: 'edges', center: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+        <div src="img/REALogo.png" style="position: absolute; background-image: url('img/REALogo.png'); background-repeat: no-repeat; background-position: 0px -80px; background-size: 250px; bottom: -150px; right: 50px; width: 250px; height: 250px; border: 0px"></div>
+	</body>
+</html>
