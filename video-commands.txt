@@ -1,0 +1,1 @@
+ffmpeg -video_size 1920x1080 -framerate 5 -f x11grab -i :0.0+2767,166 -g 5 -pix_fmt yuv420p tmp.mp4
