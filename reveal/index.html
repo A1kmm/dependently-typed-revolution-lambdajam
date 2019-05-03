@@ -39,6 +39,28 @@
                   <h1 class="heading">Properties and Propositions</h1>
                   <pre style="font-size: 40pt">
 natToString : Nat → String
+                  </pre>
+                </section>
+                <section>
+                  <h1 class="heading">Properties and Propositions</h1>
+                  <pre style="font-size: 40pt">
+natToString : Nat → String
+stringToNat : String → Maybe Nat
+                  </pre>
+                </section>
+                <section>
+                  <h1 class="heading">Properties and Propositions</h1>
+                  <pre style="font-size: 40pt">
+natToString : Nat → String
+stringToNat : String → Maybe Nat
+                    
+forall a in Nat. stringToNat (natToString a) = Just a
+                  </pre>
+                </section>
+                <section>
+                  <h1 class="heading">Properties and Propositions</h1>
+                  <pre style="font-size: 40pt">
+natToString : Nat → String
 stringToNat : String → Maybe Nat
                     
 forall a in Nat. stringToNat (natToString a) = Just a
